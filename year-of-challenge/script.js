@@ -9,17 +9,18 @@ const challenges = [
     title: "Audition for a Singing Solo",
     description:
       "Step onto that stage and let your voice be heard! A cabaret solo awaits, and so does your spotlight moment.",
-    status: "in-progress", // Options: "completed", "in-progress", "upcoming"
-    photo: "", // Add image URL here, e.g., "photos/january.jpg"
+    status: "completed", // Options: "completed", "in-progress", "upcoming"
+    photo: "./f303877f-e82a-465d-9788-df63479b6d3f.jpeg", // Add image URL here, e.g., "photos/january.jpg"
+    notes: "Nailed it!!! Got a solo in the show 🔥",
   },
   {
     month: "February",
     monthClass: "month-feb",
     emoji: "💝",
-    title: "Challenge TBD",
+    title: "Sing Solo in Cabaret Show",
     description:
-      "What wonderful adventure awaits? The possibilities are endless!",
-    status: "upcoming",
+      "You nailed the audition, now it's time to embrace the stage and share your talent with the audience!",
+    status: "in-progress",
     photo: "",
   },
   {
@@ -173,7 +174,11 @@ function renderTimeline() {
 
     const photoHtml = challenge.photo
       ? `<div class="card-photo has-image"><img src="${challenge.photo}" alt="${challenge.month} challenge"></div>`
-      : `<div class="card-photo"><div class="placeholder-text"><span>📷</span>Add your photo!</div></div>`;
+      : "";
+
+    const notesHtml = challenge.notes
+      ? `<div class="notes">${photoHtml}<p>${challenge.notes}</p></div>`
+      : "";
 
     item.innerHTML = `
               <div class="timeline-dot"></div>
@@ -189,7 +194,7 @@ function renderTimeline() {
                   </div>
                   <h3>${challenge.title}</h3>
                   <p>${challenge.description}</p>
-                  ${photoHtml}
+                  ${notesHtml}
               </div>
           `;
 
