@@ -19,9 +19,10 @@ const challenges = [
     emoji: "💝",
     title: "Sing Solo in Cabaret Show",
     description:
-      "You nailed the audition, now it's time to embrace the stage and share your talent with the audience!",
-    status: "in-progress",
-    photo: "",
+      "Nailed the audition, now it's time to embrace the stage and share your talent with the audience!",
+    status: "completed",
+    photo: "./83afa492-5e1e-4a38-87dd-99cafeb2e4ca.jpeg",
+    notes: "Learning and growing definitely happened! You can do it!",
   },
   {
     month: "March",
